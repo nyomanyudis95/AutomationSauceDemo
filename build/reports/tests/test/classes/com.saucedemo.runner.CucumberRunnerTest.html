@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CucumberRunnerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CucumberRunnerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.saucedemo.runner.html">com.saucedemo.runner</a> &gt; CucumberRunnerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">14</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">27.833s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">User can add cart 1 item  in HomePage</td>
+<td class="success">4.466s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can add cart item in ProductDetail</td>
+<td class="success">2.431s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can login with valid username and password</td>
+<td class="success">1.596s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can remove 1 item in HomePage</td>
+<td class="success">2.495s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can remove cart item in ProductDetail</td>
+<td class="success">2.433s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can sorting product by ascending based on product name in Home Screen</td>
+<td class="success">1.610s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can sorting product by ascending based on product price in Home Screen</td>
+<td class="success">1.678s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can sorting product by descending based on product name in Home Screen</td>
+<td class="success">1.805s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can sorting product by descending based on product price in Home Screen</td>
+<td class="success">1.720s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can't login with empty password</td>
+<td class="success">1.507s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can't login with empty username</td>
+<td class="success">1.566s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can't login with empty username and password</td>
+<td class="success">1.390s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can't login with invalid username and password</td>
+<td class="success">1.558s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User can't login with locked username</td>
+<td class="success">1.578s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+Scenario: User can add cart 1 item  in HomePage                                # src/test/resources/features/addRemoveItem.feature:5
+  Given User is already login                                                  # com.saucedemo.stepdef.AddRemoveCartStepDef.userIsAlreadyLogin()
+  When user click add cart in first item                                       # com.saucedemo.stepdef.AddRemoveCartStepDef.userClickAddCartInFirstItem()
+  Then assert button text in Product Detail And Home Page First Item is Remove # com.saucedemo.stepdef.AddRemoveCartStepDef.assertButtonTextInProductDetailHomePageAndCartPageIsRemove()
+  And assert firstItem in Cart Page                                            # com.saucedemo.stepdef.AddRemoveCartStepDef.assertFirstItemInCartPage()
+  And assert counterTotalCart to one                                           # com.saucedemo.stepdef.AddRemoveCartStepDef.assertCounterTotalCartToOne()
+
+Scenario: User can remove 1 item in HomePage                                        # src/test/resources/features/addRemoveItem.feature:11
+  Given User is already login                                                       # com.saucedemo.stepdef.AddRemoveCartStepDef.userIsAlreadyLogin()
+  Given user click add cart in first item                                           # com.saucedemo.stepdef.AddRemoveCartStepDef.userClickAddCartInFirstItem()
+  When user click remove cart in first item                                         # com.saucedemo.stepdef.AddRemoveCartStepDef.userClickRemoveCartInFirstItem()
+  Then assert button text in Product Detail And Home Page First Item is Add to cart # com.saucedemo.stepdef.AddRemoveCartStepDef.assertButtonTextInProductDetailAndHomePageFirstItemIsAddToCart()
+  And assert no item in Cart Page                                                   # com.saucedemo.stepdef.AddRemoveCartStepDef.assertNoItemInCartPage()
+  And assert counterTotalCart to zero                                               # com.saucedemo.stepdef.AddRemoveCartStepDef.assertCounterTotalCartToZero()
+
+Scenario: User can add cart item in ProductDetail                              # src/test/resources/features/addRemoveItem.feature:18
+  Given User is already login                                                  # com.saucedemo.stepdef.AddRemoveCartStepDef.userIsAlreadyLogin()
+  When user click item name in first item                                      # com.saucedemo.stepdef.AddRemoveCartStepDef.userClickItemNameInFirstItem()
+  And user click button Add to cart in Product Detail                          # com.saucedemo.stepdef.AddRemoveCartStepDef.userClickButtonAddToCartInProductDetail()
+  Then assert button text in Product Detail And Home Page First Item is Remove # com.saucedemo.stepdef.AddRemoveCartStepDef.assertButtonTextInProductDetailHomePageAndCartPageIsRemove()
+  And assert counterTotalCart to one                                           # com.saucedemo.stepdef.AddRemoveCartStepDef.assertCounterTotalCartToOne()
+  And assert firstItem in Cart Page                                            # com.saucedemo.stepdef.AddRemoveCartStepDef.assertFirstItemInCartPage()
+
+Scenario: User can remove cart item in ProductDetail                                # src/test/resources/features/addRemoveItem.feature:25
+  Given User is already login                                                       # com.saucedemo.stepdef.AddRemoveCartStepDef.userIsAlreadyLogin()
+  Given user click add cart in first item                                           # com.saucedemo.stepdef.AddRemoveCartStepDef.userClickAddCartInFirstItem()
+  When user click item name in first item                                           # com.saucedemo.stepdef.AddRemoveCartStepDef.userClickItemNameInFirstItem()
+  And user click button Remove to cart in Product Detail                            # com.saucedemo.stepdef.AddRemoveCartStepDef.userClickButtonRemoveToCartInProductDetail()
+  Then assert button text in Product Detail And Home Page First Item is Add to cart # com.saucedemo.stepdef.AddRemoveCartStepDef.assertButtonTextInProductDetailAndHomePageFirstItemIsAddToCart()
+  And assert counterTotalCart to zero                                               # com.saucedemo.stepdef.AddRemoveCartStepDef.assertCounterTotalCartToZero()
+  And assert no item in Cart Page                                                   # com.saucedemo.stepdef.AddRemoveCartStepDef.assertNoItemInCartPage()
+
+Scenario: User can login with valid username and password  # src/test/resources/features/login.feature:6
+  Given User is on login page                              # com.saucedemo.stepdef.LoginStepDef.userIsOnLoginPage()
+  When user input username input text with &quot;standard_user&quot; # com.saucedemo.stepdef.LoginStepDef.userInputUsernameInputTextWith(java.lang.String)
+  And user input password input text with &quot;secret_sauce&quot;   # com.saucedemo.stepdef.LoginStepDef.userInputPasswordInputTextWith(java.lang.String)
+  And user click button login                              # com.saucedemo.stepdef.LoginStepDef.userClickButtonLogin()
+  Then user is on homepage                                 # com.saucedemo.stepdef.LoginStepDef.userIsOnHomepage()
+
+Scenario: User can't login with empty password             # src/test/resources/features/login.feature:12
+  Given User is on login page                              # com.saucedemo.stepdef.LoginStepDef.userIsOnLoginPage()
+  When user input username input text with &quot;standard_user&quot; # com.saucedemo.stepdef.LoginStepDef.userInputUsernameInputTextWith(java.lang.String)
+  And user click button login                              # com.saucedemo.stepdef.LoginStepDef.userClickButtonLogin()
+totalIconError = 2
+  Then show alert error password is required               # com.saucedemo.stepdef.LoginStepDef.showAlertErrorPasswordIsRequired()
+
+Scenario: User can't login with empty username            # src/test/resources/features/login.feature:17
+  Given User is on login page                             # com.saucedemo.stepdef.LoginStepDef.userIsOnLoginPage()
+  When user input password input text with &quot;secret_sauce&quot; # com.saucedemo.stepdef.LoginStepDef.userInputPasswordInputTextWith(java.lang.String)
+  And user click button login                             # com.saucedemo.stepdef.LoginStepDef.userClickButtonLogin()
+totalIconError = 2
+  Then show alert error username is required              # com.saucedemo.stepdef.LoginStepDef.showAlertErrorUsernameIsRequired()
+
+Scenario: User can't login with empty username and password # src/test/resources/features/login.feature:22
+  Given User is on login page                               # com.saucedemo.stepdef.LoginStepDef.userIsOnLoginPage()
+  And user click button login                               # com.saucedemo.stepdef.LoginStepDef.userClickButtonLogin()
+totalIconError = 2
+  Then show alert error username is required                # com.saucedemo.stepdef.LoginStepDef.showAlertErrorUsernameIsRequired()
+
+Scenario: User can't login with invalid username and password # src/test/resources/features/login.feature:26
+  Given User is on login page                                 # com.saucedemo.stepdef.LoginStepDef.userIsOnLoginPage()
+  When user input username input text with &quot;acedcv&quot;           # com.saucedemo.stepdef.LoginStepDef.userInputUsernameInputTextWith(java.lang.String)
+  And user input password input text with &quot;aedfcaesf&quot;         # com.saucedemo.stepdef.LoginStepDef.userInputPasswordInputTextWith(java.lang.String)
+  And user click button login                                 # com.saucedemo.stepdef.LoginStepDef.userClickButtonLogin()
+totalIconError = 2
+  Then show alert error username and password dont match      # com.saucedemo.stepdef.LoginStepDef.showAlertErrorUsernameAndPasswordDontMatch()
+
+Scenario: User can't login with locked username              # src/test/resources/features/login.feature:32
+  Given User is on login page                                # com.saucedemo.stepdef.LoginStepDef.userIsOnLoginPage()
+  When user input username input text with &quot;locked_out_user&quot; # com.saucedemo.stepdef.LoginStepDef.userInputUsernameInputTextWith(java.lang.String)
+  And user input password input text with &quot;secret_sauce&quot;     # com.saucedemo.stepdef.LoginStepDef.userInputPasswordInputTextWith(java.lang.String)
+  And user click button login                                # com.saucedemo.stepdef.LoginStepDef.userClickButtonLogin()
+totalIconError = 2
+  Then show alert error user has been locked out             # com.saucedemo.stepdef.LoginStepDef.showAlertErrorUserHasBeenLockedOut()
+
+Scenario: User can sorting product by ascending based on product name in Home Screen # src/test/resources/features/sortingProduct.feature:5
+  Given User is already login                                                        # com.saucedemo.stepdef.AddRemoveCartStepDef.userIsAlreadyLogin()
+  When user select sorting type to Name(A to Z)                                      # com.saucedemo.stepdef.SortingProductStepDef.userSelectSortingTypeToNameAToZ()
+  Then all item display in Home Page is sort ascending base on productName           # com.saucedemo.stepdef.SortingProductStepDef.allItemDisplayInHomePageIsSortAscendingBaseOnProductName()
+
+Scenario: User can sorting product by descending based on product name in Home Screen # src/test/resources/features/sortingProduct.feature:9
+  Given User is already login                                                         # com.saucedemo.stepdef.AddRemoveCartStepDef.userIsAlreadyLogin()
+  When user select sorting type to Name(Z to A)                                       # com.saucedemo.stepdef.SortingProductStepDef.userSelectSortingTypeToNameZToA()
+  Then all item display in Home Page is sort descending base on productName           # com.saucedemo.stepdef.SortingProductStepDef.allItemDisplayInHomePageIsSortDescendingBaseOnProductName()
+
+Scenario: User can sorting product by ascending based on product price in Home Screen # src/test/resources/features/sortingProduct.feature:13
+  Given User is already login                                                         # com.saucedemo.stepdef.AddRemoveCartStepDef.userIsAlreadyLogin()
+  When user select sorting type to Price(low to high)                                 # com.saucedemo.stepdef.SortingProductStepDef.userSelectSortingTypeToPriceLowToHigh()
+  Then all item display in Home Page is sort ascending base on productPrice           # com.saucedemo.stepdef.SortingProductStepDef.allItemDisplayInHomePageIsSortAscendingBaseOnProductPrice()
+
+Scenario: User can sorting product by descending based on product price in Home Screen # src/test/resources/features/sortingProduct.feature:17
+  Given User is already login                                                          # com.saucedemo.stepdef.AddRemoveCartStepDef.userIsAlreadyLogin()
+  When user select sorting type to Price(high to low)                                  # com.saucedemo.stepdef.SortingProductStepDef.userSelectSortingTypeToPriceHighToLow()
+  Then all item display in Home Page is sort descending base on productPrice           # com.saucedemo.stepdef.SortingProductStepDef.allItemDisplayInHomePageIsSortDescendingBaseOnProductPrice()
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+Nov 16, 2023 4:14:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:14:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:14:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:14:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:14:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:14:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:14:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:14:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:14:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:15:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:15:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:15:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:15:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+Nov 16, 2023 4:15:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 119, so returning the closest version found: 117
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at Nov 16, 2023, 4:15:08 PM</p>
+</div>
+</div>
+</body>
+</html>
